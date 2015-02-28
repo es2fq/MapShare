@@ -1,0 +1,68 @@
+.horiz {
+	display: inline;
+}
+.centered {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -50px;
+	margin-left: -100px;
+}
+.margined {
+	width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: lightgray;
+}
+.wrapper {
+	text-align: center;
+	color: white;
+}
+.bordered {
+	border: groove;
+	border-color: white;
+}
+.lefthalf {
+	width: 50%;
+	float: left;
+	text-align: center;
+}
+.righthalf {
+	width: 50%;
+	float: right;
+	text-align: center;
+}
+iframe {
+	margin-top: 30px;
+	margin-right: 20px;
+	margin-left: 20px;
+	margin-bottom: 30px;
+}
+@font-face {
+	font-family: Boogaloo;
+	src: url( Boogaloo.otf ) format( "opentype" );
+	font-family: DroidSans;
+	src: url( DroidSans.ttf ) format( "opentype" );
+}
+#jukebox {
+	position: absolute;
+	margin-right: 5px;
+	margin-top: 5px;
+	color: black;
+	font-size: 5;
+}
+#square {
+	height: 100px;
+	width: 100px;
+	display: inline-block;
+	background-color: white;
+	border-radius: 5px;
+}
+a:link {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+}
