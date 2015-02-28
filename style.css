@@ -12,7 +12,6 @@
 	width: 700px;
 	margin-left: auto;
 	margin-right: auto;
-	background-color: lightgray;
 }
 .wrapper {
 	text-align: center;
@@ -57,12 +56,4 @@ iframe {
 	display: inline-block;
 	background-color: white;
 	border-radius: 5px;
-}
-a:link {
-	color: #FFFFFF;
-	text-decoration: none;
-}
-a:visited {
-	color: #FFFFFF;
-	text-decoration: none;
 }

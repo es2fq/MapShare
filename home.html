@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	
+	<script type="text/javascript">
+		function main() {
+			showFrame();
+			showText();
+		}
+		function showFrame() {
+			var input = getInput( "input" ).split(' ').join('+');
+			if( input != "" ) {
+				frame = document.getElementById( "iframe" );
+				frame.setAttribute( "src" , "https://www.google.com/maps/embed/v1/place?key=AIzaSyBpT0_YfWLGINCQTiQfS8ldYmPzWjegz1g&q="
+					+input+"&attribution_source=Google+Maps+Embed+API" );
+				frame.setAttribute( "style" , "" );
+				frame.style.width = "95%";
+				frame.style.height = 450 + "px";
+				frame.style.border = 0;
+				frame.style.display = "block";
+				frame.style.margin = "0 auto";
+			}
+		}
+		function showText() {
+			var text = document.getElementById( "text" );
+			text.setAttribute( "style" , "" );
+			text.style.width = "95%";
+			text.style.display = "table";
+			text.style.margin = "0 auto";
+
+			console.log( text.innerHTML );
+		}
+		function getInput( name ) {
+			return document.getElementById( "input" ).value;
+		}
+	</script>
+</head>
+<body style="background-color: lightblue;">
+	<title>MapShare</title>
+	<font face="DroidSans">
+		<div align="center">
+			<header style="margin-bottom:20px"><font size="8" face="DroidSans">MapShare</font></header>
+			<form>
+				<input id="input" type="text" class="margined" placeholder="Location" style="width:300px;" autofocus>
+				<input type="submit" value="Search" style="margin-bottom:30px;" onclick="main()">
+			</form>
+		</div>
+
+		<iframe id="iframe" frameborder="0" style="display:none;"></iframe>
+
+		<p id="text" align="center" style="display:none;">
+			<font size="6">Select this map view</font>
+		</p>
+		
+	</font>
+</body>
+</html>
